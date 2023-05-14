@@ -6,7 +6,7 @@ resource "aws_iam_policy" "eks_admin_policy" {
 }
 
 resource "aws_iam_role" "eks_admin" {
-  name = "eks-admin"
+  name               = "eks-admin"
   assume_role_policy = data.aws_iam_policy_document.assume_policy.json
 }
 
@@ -23,7 +23,7 @@ resource "aws_iam_policy" "eks_readonly_policy" {
 }
 
 resource "aws_iam_role" "eks_readonly" {
-  name = "eks-readonly"
+  name               = "eks-readonly"
   assume_role_policy = data.aws_iam_policy_document.assume_policy.json
 }
 

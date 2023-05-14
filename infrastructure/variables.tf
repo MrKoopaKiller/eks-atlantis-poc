@@ -15,10 +15,10 @@ variable "region" {
 variable "vpc" {
   description = "VPC configuration"
   type = object({
-    cidr               = string
-    private_subnets    = list(string)
-    public_subnets     = list(string)
-    enable_nat_gateway = bool
+    cidr                    = string
+    private_subnets         = list(string)
+    public_subnets          = list(string)
+    enable_nat_gateway      = bool
     map_public_ip_on_launch = bool
   })
 }

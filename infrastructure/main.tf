@@ -12,13 +12,13 @@ locals {
     name = "vpc-${local.basename}"
     azs  = ["eu-central-1a", "eu-central-1b"]
     public_subnet_tags = {
-      "subnet-type"                                 = "public"
-      "kubernetes.io/role/elb"                      = "1"
+      "subnet-type"                             = "public"
+      "kubernetes.io/role/elb"                  = "1"
       "kubernetes.io/cluster/${local.basename}" = "shared"
     }
     private_subnet_tags = {
-      "subnet-type"                                 = "private"
-      "kubernetes.io/role/internal-elb"             = "1"
+      "subnet-type"                             = "private"
+      "kubernetes.io/role/internal-elb"         = "1"
       "kubernetes.io/cluster/${local.basename}" = "shared"
     }
   }
